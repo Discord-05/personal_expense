@@ -1,0 +1,305 @@
+/**
+ * Theme System - Light & Dark Mode
+ * CSS Variables for consistent theming across the application
+ */
+
+/* ============================================
+   DEFAULT THEME (LIGHT MODE)
+   ============================================ */
+:root {
+    /* Primary Colors */
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --primary-light: #e0e7ff;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-hover: #f1f5f9;
+    
+    /* Text Colors */
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-tertiary: #94a3b8;
+    --text-inverse: #ffffff;
+    
+    /* Border Colors */
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --border-focus: #6366f1;
+    
+    /* Card & Component Colors */
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: rgba(0, 0, 0, 0.1);
+    
+    /* Navigation */
+    --nav-bg: #ffffff;
+    --nav-border: #e2e8f0;
+    --nav-item-hover: #f1f5f9;
+    --nav-item-active: #e0e7ff;
+    
+    /* Form Elements */
+    --input-bg: #ffffff;
+    --input-border: #e2e8f0;
+    --input-focus-bg: #ffffff;
+    --input-disabled-bg: #f1f5f9;
+    
+    /* Buttons */
+    --btn-secondary-bg: #f1f5f9;
+    --btn-secondary-hover: #e2e8f0;
+    --btn-secondary-text: #475569;
+    
+    /* Status Colors */
+    --success-color: #22c55e;
+    --success-bg: #dcfce7;
+    --success-border: #86efac;
+    
+    --error-color: #ef4444;
+    --error-bg: #fee2e2;
+    --error-border: #fca5a5;
+    
+    --warning-color: #f59e0b;
+    --warning-bg: #fef3c7;
+    --warning-border: #fcd34d;
+    
+    --info-color: #3b82f6;
+    --info-bg: #dbeafe;
+    --info-border: #93c5fd;
+    
+    /* Chart Colors (Light Mode) */
+    --chart-grid: rgba(0, 0, 0, 0.05);
+    --chart-text: #64748b;
+    --chart-tooltip-bg: #ffffff;
+    --chart-tooltip-border: #e2e8f0;
+    --chart-tooltip-shadow: rgba(0, 0, 0, 0.1);
+    
+    /* Chart Color Palette */
+    --chart-color-1: #6366f1;
+    --chart-color-2: #8b5cf6;
+    --chart-color-3: #ec4899;
+    --chart-color-4: #f43f5e;
+    --chart-color-5: #f59e0b;
+    --chart-color-6: #10b981;
+    --chart-color-7: #14b8a6;
+    --chart-color-8: #06b6d4;
+    --chart-color-9: #3b82f6;
+    --chart-color-10: #6366f1;
+    
+    /* Modal */
+    --modal-bg: #ffffff;
+    --modal-overlay: rgba(0, 0, 0, 0.5);
+    
+    /* Table */
+    --table-header-bg: #f8fafc;
+    --table-row-hover: #f8fafc;
+    --table-border: #e2e8f0;
+    
+    /* Sidebar/Filter */
+    --filter-bg: #f8fafc;
+    --filter-border: #e2e8f0;
+    
+    /* Scrollbar */
+    --scrollbar-track: #f1f5f9;
+    --scrollbar-thumb: #cbd5e1;
+    --scrollbar-thumb-hover: #94a3b8;
+    
+    /* Theme Toggle */
+    --theme-toggle-bg: #f1f5f9;
+    --theme-toggle-hover: #e2e8f0;
+    --theme-toggle-icon: #64748b;
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+[data-theme="dark"] {
+    /* Primary Colors */
+    --primary-color: #818cf8;
+    --primary-hover: #a5b4fc;
+    --primary-light: #312e81;
+    
+    /* Background Colors */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-hover: #334155;
+    
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-inverse: #0f172a;
+    
+    /* Border Colors */
+    --border-color: #334155;
+    --border-hover: #475569;
+    --border-focus: #818cf8;
+    
+    /* Card & Component Colors */
+    --card-bg: #1e293b;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: rgba(0, 0, 0, 0.5);
+    
+    /* Navigation */
+    --nav-bg: #1e293b;
+    --nav-border: #334155;
+    --nav-item-hover: #334155;
+    --nav-item-active: #312e81;
+    
+    /* Form Elements */
+    --input-bg: #1e293b;
+    --input-border: #334155;
+    --input-focus-bg: #1e293b;
+    --input-disabled-bg: #334155;
+    
+    /* Buttons */
+    --btn-secondary-bg: #334155;
+    --btn-secondary-hover: #475569;
+    --btn-secondary-text: #e2e8f0;
+    
+    /* Status Colors */
+    --success-color: #22c55e;
+    --success-bg: #14532d;
+    --success-border: #166534;
+    
+    --error-color: #f87171;
+    --error-bg: #7f1d1d;
+    --error-border: #991b1b;
+    
+    --warning-color: #fbbf24;
+    --warning-bg: #78350f;
+    --warning-border: #92400e;
+    
+    --info-color: #60a5fa;
+    --info-bg: #1e3a8a;
+    --info-border: #1e40af;
+    
+    /* Chart Colors (Dark Mode) */
+    --chart-grid: rgba(255, 255, 255, 0.05);
+    --chart-text: #cbd5e1;
+    --chart-tooltip-bg: #1e293b;
+    --chart-tooltip-border: #334155;
+    --chart-tooltip-shadow: rgba(0, 0, 0, 0.5);
+    
+    /* Chart Color Palette (Brighter for dark mode) */
+    --chart-color-1: #818cf8;
+    --chart-color-2: #a78bfa;
+    --chart-color-3: #f472b6;
+    --chart-color-4: #fb7185;
+    --chart-color-5: #fbbf24;
+    --chart-color-6: #34d399;
+    --chart-color-7: #2dd4bf;
+    --chart-color-8: #22d3ee;
+    --chart-color-9: #60a5fa;
+    --chart-color-10: #818cf8;
+    
+    /* Modal */
+    --modal-bg: #1e293b;
+    --modal-overlay: rgba(0, 0, 0, 0.75);
+    
+    /* Table */
+    --table-header-bg: #1e293b;
+    --table-row-hover: #334155;
+    --table-border: #334155;
+    
+    /* Sidebar/Filter */
+    --filter-bg: #1e293b;
+    --filter-border: #334155;
+    
+    /* Scrollbar */
+    --scrollbar-track: #1e293b;
+    --scrollbar-thumb: #475569;
+    --scrollbar-thumb-hover: #64748b;
+    
+    /* Theme Toggle */
+    --theme-toggle-bg: #334155;
+    --theme-toggle-hover: #475569;
+    --theme-toggle-icon: #cbd5e1;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+* {
+    transition: background-color 0.2s ease, 
+                border-color 0.2s ease, 
+                color 0.2s ease;
+}
+
+/* Prevent transition on page load */
+.no-transition * {
+    transition: none !important;
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON STYLES
+   ============================================ */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--theme-toggle-bg);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--theme-toggle-hover);
+    transform: scale(1.05);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--theme-toggle-icon);
+}
+
+/* Hide/show icons based on theme */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR (Both Themes)
+   ============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}

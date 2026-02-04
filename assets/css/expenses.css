@@ -1,0 +1,388 @@
+/**
+ * Personal Expense Tracker - Expenses Page Styles
+ */
+
+/* ===== Filters Container ===== */
+.filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-actions {
+    justify-content: flex-end;
+}
+
+/* ===== Filter Summary Stats ===== */
+.filter-summary {
+    display: flex;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background-color: var(--bg-hover);
+    border-radius: var(--radius);
+    margin-top: var(--spacing-md);
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.summary-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.summary-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* ===== Table Styles ===== */
+.table-container {
+    overflow-x: auto;
+}
+
+.expenses-table {
+    width: 100%;
+    min-width: 800px;
+}
+
+.expenses-table thead {
+    background-color: var(--bg-hover);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.expenses-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.expenses-table td {
+    padding: var(--spacing-md);
+    vertical-align: middle;
+}
+
+.expense-row {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.expense-row:hover {
+    background-color: var(--bg-hover);
+}
+
+.expense-row:last-child {
+    border-bottom: none;
+}
+
+/* ===== Sortable Columns ===== */
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.sortable:hover {
+    background-color: var(--bg-hover);
+}
+
+.sort-icon {
+    margin-left: var(--spacing-xs);
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+.sortable.sorted .sort-icon {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+/* ===== Action Buttons ===== */
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-xs);
+    justify-content: center;
+}
+
+.action-btn {
+    min-width: 2rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Expense Notes Preview ===== */
+.expense-notes {
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-2xl);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===== Pagination ===== */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination-info {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.page-numbers {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+
+.pagination-dots {
+    padding: 0 var(--spacing-xs);
+    color: var(--text-secondary);
+}
+
+/* ===== Textarea Styles ===== */
+.textarea {
+    min-height: 80px;
+    resize: vertical;
+    font-family: var(--font-sans);
+    line-height: 1.5;
+}
+
+/* ===== Modal Small Variant ===== */
+.modal-sm {
+    max-width: 400px;
+}
+
+/* ===== Delete Preview ===== */
+.expense-delete-preview {
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .filters-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filters-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-summary {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .expenses-table {
+        min-width: 100%;
+    }
+
+    .expenses-table thead {
+        display: none;
+    }
+
+    .expenses-table tbody,
+    .expenses-table tr,
+    .expenses-table td {
+        display: block;
+    }
+
+    .expense-row {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+    }
+
+    .expenses-table td {
+        padding: var(--spacing-xs) 0;
+        border: none;
+    }
+
+    .expenses-table td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: inline-block;
+        width: 100px;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+    }
+
+    .action-buttons {
+        justify-content: flex-start;
+        margin-top: var(--spacing-sm);
+    }
+
+    .pagination-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .page-numbers {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .user-menu {
+        width: 100%;
+    }
+
+    #addExpenseBtn {
+        width: 100%;
+    }
+}
+
+/* ===== Loading State ===== */
+.table-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* ===== Highlight Animation for New/Updated Rows ===== */
+@keyframes highlight {
+    0% {
+        background-color: var(--primary-color);
+        opacity: 0.2;
+    }
+    100% {
+        background-color: transparent;
+        opacity: 1;
+    }
+}
+
+.expense-row.highlight {
+    animation: highlight 1s ease-in-out;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .sidebar,
+    .dashboard-header,
+    .filters-container,
+    .action-buttons,
+    .pagination-container {
+        display: none !important;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        border: none;
+        box-shadow: none;
+    }
+
+    .expense-row {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===== Custom Scrollbar for Table ===== */
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: var(--bg-hover);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
+/* ===== Badge Enhancements ===== */
+.badge {
+    font-weight: 500;
+    padding: 0.25rem 0.625rem;
+}
+
+/* ===== Form Enhancements ===== */
+.form-group .text-destructive {
+    color: var(--error-color);
+}
+
+.form-help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== Utility Classes ===== */
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mt-3 {
+    margin-top: var(--spacing-md);
+}
